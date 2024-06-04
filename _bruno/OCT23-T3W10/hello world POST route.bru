@@ -1,0 +1,18 @@
+meta {
+  name: hello world POST route
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "favouritePokemon": "squirtle",
+    "favouriteFood":"mango"
+  }
+}
