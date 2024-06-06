@@ -2,7 +2,6 @@
 
 const express = require("express");
 const serverInstance = express();
-const PokemonRouter = require("./routers/pokemonRoutes.js");
 
 
 // Raw JSON in body allowed
@@ -12,7 +11,11 @@ serverInstance.use(express.urlencoded({extended: true}));
 
 
 // Every route that begins with /pokemon gets passed to PokemonRouter
+const PokemonRouter = require("./routers/pokemonRoutes.js");
 serverInstance.use("/pokemon", PokemonRouter);
+serverInstance.use("/digimon", PokemonRouter);
+serverInstance.use("/food", PokemonRouter);
+serverInstance.use("/countries", PokemonRouter);
 
 
 
