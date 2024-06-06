@@ -29,9 +29,15 @@ function verifyAuthData(request, response, next){
 
 }
 
+async function exampleAsyncMiddleware(request, response, next){
+	console.log("Called from async middleware");
+	next();
+}
+
 
 module.exports = {
-	readAuthData, verifyAuthData
+	readAuthData, verifyAuthData,
+	exampleAsyncMiddleware
 };
 
 /*

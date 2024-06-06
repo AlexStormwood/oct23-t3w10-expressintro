@@ -9,10 +9,7 @@ serverInstance.use(express.json());
 // Form data in body allowed
 serverInstance.use(express.urlencoded({extended: true}));
 
-const {readAuthData, verifyAuthData} = require("./middleware/authentication.js");
 
-serverInstance.use(readAuthData);
-serverInstance.use(verifyAuthData);
 
 
 // Every route that begins with /pokemon gets passed to PokemonRouter
